@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXODINDO - Draft Contract System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+  <aside class="sidebar no-print">
+    <div class="sidebar-logo">
+      <img class="logo-icon" src="images/logo.svg" alt="EXODINDO Logo">
+      <div>
+        <div class="logo-text">EXODINDO</div>
+        <div style="font-size: 9px; color: var(--text-muted); letter-spacing: 1px;">Contract System</div>
+      </div>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="#" class="active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Draft Contract
+      </a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Quotations
+      </a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Projects
+      </a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Clients
+      </a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Pricing
+      </a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        Templates
+      </a></li>
+      <li><a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header no-print">
+      <div>
+        <h1>Draft <span>Contract</span></h1>
+        <p style="color: var(--text-muted); font-size: 14px; margin-top: 5px;">Buat dan kelola kontrak profesional untuk klien EXODINDO</p>
+      </div>
+      <div class="action-buttons">
+        <button class="btn btn-secondary" onclick="loadTemplate()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Load Template
+        </button>
+        <button class="btn btn-secondary" onclick="saveDraft()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Save Draft
+        </button>
+        <button class="btn btn-primary" onclick="window.print()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print / PDF
+        </button>
+      </div>
+    </div>
+
+    <div class="stats-grid no-print">
+      <div class="stat-card">
+        <h4>Total Contracts</h4>
+        <div class="value">24</div>
+        <div class="sub">+3 this month</div>
+      </div>
+      <div class="stat-card">
+        <h4>Pending Sign</h4>
+        <div class="value">5</div>
+        <div class="sub">Awaiting signature</div>
+      </div>
+      <div class="stat-card">
+        <h4>Active Projects</h4>
+        <div class="value">12</div>
+        <div class="sub">In progress</div>
+      </div>
+      <div class="stat-card">
+        <h4>Total Revenue</h4>
+        <div class="value">Rp 2.4M</div>
+        <div class="sub">This quarter</div>
+      </div>
+    </div>
+
+    <div class="form-panel no-print">
+      <h3>📝 Contract Information</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Contract Number</label>
+          <input type="text" id="contractNumber" value="EXD/CON/2026/072" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Contract Date</label>
+          <input type="date" id="contractDate" value="2026-06-26" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Project Name</label>
+          <input type="text" id="projectName" value="Produksi Backdrop & Stage Event di Park Hyatt Jakarta" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Project Location</label>
+          <input type="text" id="projectLocation" value="Park Hyatt Jakarta" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Client Name</label>
+          <input type="text" id="clientName" value="The Teh Group" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Client PIC</label>
+          <input type="text" id="clientPIC" value="Nadira" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Client Phone</label>
+          <input type="text" id="clientPhone" value="+6017-7716919" onchange="updateContract()">
+        </div>
+        <div class="form-group">
+          <label>Client Email</label>
+          <input type="email" id="clientEmail" value="nadira@tehteam.com" onchange="updateContract()">
+        </div>
+      </div>
+    </div>
+
+    <div class="contract-preview">
+      <div class="contract-content" id="contractContent">
+        <div class="watermark">EXODINDO</div>
+        
+        <div class="contract-header">
+          <div class="contract-header-left">
+            <h1>EXODINDO</h1>
+            <div class="subtitle">PT. EXOD CREATIVE INDONESIA</div>
+            <div style="margin-top: 15px; font-size: 11px; color: #666;">
+              <div>Jl. Percetakan Negara No.265C</div>
+              <div>Jakarta Pusat, INDONESIA</div>
+              <div style="margin-top: 5px;">NPWP: 62.896.424.9-023.000</div>
+              <div>Email: exodcreative.indonesia@gmail.com</div>
+              <div>WA: 0818-262-889 / 0852-7922-2703</div>
+            </div>
+          </div>
+          <div class="contract-header-right">
+            <div class="contract-type">SERVICE CONTRACT</div>
+            <div class="contract-number" id="displayContractNumber">EXD/CON/2026/072</div>
+            <div class="contract-date" id="displayContractDate">26 Juni 2026</div>
+          </div>
+        </div>
+
+        <div class="contract-title">
+          <h2>SURAT PERJANJIAN KERJA SAMA</h2>
+          <div class="contract-subtitle">SERVICE AGREEMENT CONTRACT</div>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pihak-Pihak / Parties</h3>
+          <p style="margin-bottom: 20px;">Perjanjian Kerja Sama ini ("Perjanjian") dibuat dan ditandatangani pada tanggal <strong id="displayAgreementDate">26 Juni 2026</strong>, oleh dan antara:</p>
+          
+          <div class="parties-grid">
+            <div class="party-box">
+              <h4>PIHAK PERTAMA (Provider)</h4>
+              <div class="field"><span class="field-label">Nama Perusahaan</span><span class="field-value">PT Exod Creative Indonesia</span></div>
+              <div class="field"><span class="field-label">Alamat</span><span class="field-value">Jl. Percetakan Negara No.265C, Jakarta Pusat</span></div>
+              <div class="field"><span class="field-label">NPWP</span><span class="field-value">62.896.424.9-023.000</span></div>
+              <div class="field"><span class="field-label">No. Rekening</span><span class="field-value">BCA 0941725995 a/n ANAZ ANDREAN</span></div>
+              <div class="field"><span class="field-label">No. Rekening 2</span><span class="field-value">UOB 4443010216 a/n Exod Creative Indonesia</span></div>
+              <div class="field"><span class="field-label">Email</span><span class="field-value">exodcreative.indonesia@gmail.com</span></div>
+              <div class="field"><span class="field-label">Telepon</span><span class="field-value">0818-262-889</span></div>
+              <p style="margin-top: 10px; font-size: 11px; color: #666;"><em>Selanjutnya disebut sebagai "<strong>PROVIDER</strong>"</em></p>
+            </div>
+            <div class="party-box">
+              <h4>PIHAK KEDUA (Client)</h4>
+              <div class="field"><span class="field-label">Nama Perusahaan</span><span class="field-value" id="displayClientName">The Teh Group</span></div>
+              <div class="field"><span class="field-label">Alamat</span><span class="field-value">Lippo Kuningan, RT.8/RW.3, Kuningan, Karet, Setiabudi, Jakarta Selatan 12920</span></div>
+              <div class="field"><span class="field-label">PIC</span><span class="field-value" id="displayClientPIC">Nadira</span></div>
+              <div class="field"><span class="field-label">Telepon</span><span class="field-value" id="displayClientPhone">+6017-7716919</span></div>
+              <div class="field"><span class="field-label">Email</span><span class="field-value" id="displayClientEmail">nadira@tehteam.com</span></div>
+              <div class="field"><span class="field-label">NPWP</span><span class="field-value">[Diisi oleh Klien]</span></div>
+              <p style="margin-top: 10px; font-size: 11px; color: #666;"><em>Selanjutnya disebut sebagai "<strong>KLIEN</strong>"</em></p>
+            </div>
+          </div>
+
+          <p>PIHAK PERTAMA dan PIHAK KEDUA secara bersama-sama disebut sebagai "<strong>PARA PIHAK</strong>" dan secara sendiri-sendiri disebut sebagai "<strong>PIHAK</strong>".</p>
+          <p>PARA PIHAK dengan ini sepakat untuk mengikatkan diri dalam Perjanjian Kerja Sama dengan ketentuan dan syarat-syarat sebagai berikut:</p>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 1 - Lingkup Pekerjaan / Scope of Work</h3>
+          <p>PROVIDER setuju untuk menyediakan jasa produksi dan penyewaan peralatan event sesuai dengan rincian sebagai berikut:</p>
+          <p style="font-weight: 600; margin-top: 15px;">Task 1 - Booth Construction, Furniture, Graphics and Electrical</p>
+          
+          <table class="contract-table">
+            <thead>
+              <tr>
+                <th style="width: 5%;">No</th>
+                <th style="width: 35%;">Item / Spesifikasi</th>
+                <th style="width: 10%;">Unit</th>
+                <th style="width: 10%;">Qty</th>
+                <th style="width: 10%;">Days</th>
+                <th style="width: 15%;">Unit Price</th>
+                <th style="width: 15%;">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="itemsTableBody">
+              <tr>
+                <td class="text-center">1</td>
+                <td>Table Runner<br><small style="color:#666;">Casa Printing Logo Sublim Size: 1.2-1.5 metres width</small></td>
+                <td class="text-center">PP</td>
+                <td class="text-center">6</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 350.000</td>
+                <td class="text-right">Rp 2.100.000</td>
+              </tr>
+              <tr>
+                <td class="text-center">2</td>
+                <td>Logo Cube (for decoration purpose)<br><small style="color:#666;">Multiplek Fin.Flexy Size: 10-15cm</small></td>
+                <td class="text-center">Pcs</td>
+                <td class="text-center">6</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 275.000</td>
+                <td class="text-right">Rp 1.650.000</td>
+              </tr>
+              <tr>
+                <td class="text-center">3</td>
+                <td>Physical Backdrop<br><small style="color:#666;">Multiplek Fin.Flexy Size: 3m x 2m</small></td>
+                <td class="text-center">M²</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 750.000</td>
+                <td class="text-right">Rp 750.000</td>
+              </tr>
+              <tr>
+                <td class="text-center">4</td>
+                <td>Flooring<br><small style="color:#666;">Multiplek Fin. Carpet Grey Color Size: T1.22m P.3m L.2m</small></td>
+                <td class="text-center">M²</td>
+                <td class="text-center">2</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 750.000</td>
+                <td class="text-right">Rp 1.500.000</td>
+              </tr>
+              <tr>
+                <td class="text-center">5</td>
+                <td>Stage<br><small style="color:#666;">Multiplek Fin.Flexy</small></td>
+                <td class="text-center">M²</td>
+                <td class="text-center">10</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 1.100.000</td>
+                <td class="text-right">Rp 11.000.000</td>
+              </tr>
+              <tr>
+                <td class="text-center">6</td>
+                <td>Podium Wrap<br><small style="color:#666;">FOAM BOARD MATERIAL, Size: Tbc</small></td>
+                <td class="text-center">Pcs</td>
+                <td class="text-center">10</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 1.250.000</td>
+                <td class="text-right">Rp 12.500.000</td>
+              </tr>
+              <tr>
+                <td class="text-center">7</td>
+                <td>Projection Light (Light Logo Reveal)<br><small style="color:#666;">Full-Color GOBO Projector IP54, 360° Rotatable Logo Light</small></td>
+                <td class="text-center">Unit</td>
+                <td class="text-center">1</td>
+                <td class="text-center">1</td>
+                <td class="text-right">Rp 950.000</td>
+                <td class="text-right">Rp 950.000</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6" class="text-right"><strong>MATERIAL TOTAL</strong></td>
+                <td class="text-right"><strong>Rp 30.450.000</strong></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Loading dan Bongkar (Jabodetabek)</td>
+                <td class="text-right">Rp 6.600.000</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Set In / Set Out</td>
+                <td class="text-right">Rp 7.500.000</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Engineering Service</td>
+                <td class="text-right">Rp 3.500.000</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">Transportasi</td>
+                <td class="text-right">Rp 2.750.000</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right"><strong>SUBTOTAL</strong></td>
+                <td class="text-right"><strong>Rp 50.800.000</strong></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">PPN (sesuai ketentuan)</td>
+                <td class="text-right">Rp 0</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">PPH 2% (jika berlaku)</td>
+                <td class="text-right">Rp 471.000</td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right" style="font-size: 14px;"><strong>GRAND TOTAL</strong></td>
+                <td class="text-right" style="font-size: 14px;"><strong>Rp 51.271.000</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <p style="font-size: 12px; color: #666; font-style: italic; margin-top: 10px;">
+            * Harga di atas sudah termasuk transportasi, instalasi, dan dismantling. Harga bersifat rental dan one package pricing.
+          </p>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 2 - Syarat Pembayaran / Payment Terms</h3>
+          <ol>
+            <li><strong>Down Payment (DP):</strong> Sebesar <strong>50% (lima puluh persen)</strong> dari total nilai kontrak dibayarkanUpon Confirmation sebelum pekerjaan dimulai.</li>
+            <li><strong>Pelunasan:</strong> Sebesar <strong>50% (lima puluh persen)</strong> sisanya dibayarkan upon completion of job (setelah pekerjaan selesai).</li>
+            <li><strong>Metode Pembayaran:</strong> Transfer bank ke rekening berikut:
+              <ul style="margin-top: 8px;">
+                <li><strong>Bank Central Asia (BCA):</strong> No. Rek 0941725995 a/n ANAZ ANDREAN</li>
+                <li><strong>Bank UOB:</strong> No. Rek 4443010216 a/n Exod Creative Indonesia</li>
+              </ul>
+            </li>
+            <li>Klien wajib mengirimkan bukti transfer (proof of payment) ke email: <strong>exodcreative.indonesia@gmail.com</strong></li>
+            <li>Pembayaran dilakukan dalam mata uang <strong>Rupiah Indonesia (IDR)</strong>.</li>
+            <li>Keterlambatan pembayaran lebih dari 7 (tujuh) hari kerja akan dikenakan denda sebesar <strong>2% (dua persen)</strong> per minggu dari nilai outstanding.</li>
+          </ol>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 3 - Jadwal Pelaksanaan / Project Timeline</h3>
+          <ol>
+            <li><strong>Tanggal Mulai:</strong> Sesuai kesepakatan tertulis antara PARA PIHAK.</li>
+            <li><strong>Load In / Instalasi:</strong> Dilakukan H-1 sebelum acara (waktu dan lokasi sesuai koordinasi).</li>
+            <li><strong>Event Day:</strong> Sesuai jadwal acara KLIEN.</li>
+            <li><strong>Load Out / Dismantling:</strong> Dilakukan pada hari yang sama atau H+1 setelah acara selesai.</li>
+            <li>Keterlambatan dari pihak KLIEN dalam memberikan file desain/logo akan menjadi tanggung jawab KLIEN dan tidak dapat dijadikan alasan penundaan pembayaran.</li>
+          </ol>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 4 - Kewajiban Para Pihak / Obligations</h3>
+          <h4>A. Kewajiban PROVIDER:</h4>
+          <ol>
+            <li>Menyediakan seluruh material dan peralatan sesuai spesifikasi yang tercantum dalam Pasal 1.</li>
+            <li>Melakukan instalasi dan dismantling dengan tenaga ahli yang kompeten.</li>
+            <li>Memastikan seluruh pekerjaan selesai tepat waktu sesuai jadwal yang disepakati.</li>
+            <li>Memberikan garansi teknis selama acara berlangsung.</li>
+            <li>Menjaga kerahasiaan informasi dan materi yang diberikan oleh KLIEN.</li>
+          </ol>
+          <h4>B. Kewajiban KLIEN:</h4>
+          <ol>
+            <li>Melakukan pembayaran sesuai ketentuan dalam Pasal 2.</li>
+            <li>Menunjuk 1 (satu) Person In Charge (PIC) untuk koordinasi dengan tim PROVIDER selama proses pembangunan booth dari awal hingga akhir.</li>
+            <li>Menyediakan ID Card untuk tim teknis PROVIDER yang bertugas di lokasi acara.</li>
+            <li>Menyediakan seluruh file logo dan poster sesuai dengan sample booth work images yang telah disepakati, paling lambat H-3 sebelum load in.</li>
+            <li>Memastikan akses lokasi untuk load in dan load out sesuai jadwal.</li>
+          </ol>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 5 - Syarat & Ketentuan / Terms & Conditions</h3>
+          <ol>
+            <li><strong>Pembatalan:</strong> Setiap pembatalan setelah penandatanganan kontrak dikenakan biaya sebesar <strong>80% (delapan puluh persen)</strong> dari total nilai kontrak.</li>
+            <li><strong>Perubahan Pesanan:</strong> Harga di atas sesuai dengan kontrak final yang disepakati. Setiap penambahan item atau pesanan on-site setelah konfirmasi akan dikenakan biaya tambahan sesuai kesepakatan.</li>
+            <li><strong>File Desain:</strong> Semua logo dan poster akan disediakan oleh KLIEN sesuai dengan sample booth work images. Keterlambatan pengiriman file desain pada deadline yang ditentukan akan menyebabkan keterlambatan proses printing. PROVIDER tidak bertanggung jawab atas keterlambatan dan segala hal yang terjadi di luar kendali PROVIDER.</li>
+            <li><strong>Koordinasi:</strong> KLIEN akan menunjuk PIC untuk berkoordinasi dengan tim kontraktor selama proses pembangunan booth dari awal hingga akhir untuk memastikan hasil sesuai dengan spesifikasi yang tercantum dalam drawing yang disepakati.</li>
+            <li><strong>Akses Teknis:</strong> ID Card untuk tim teknis yang bertugas dan mendukung layanan trouble services untuk electrical & booth services akan disediakan oleh KLIEN.</li>
+            <li><strong>Harga Rental:</strong> Harga yang tercantum merupakan harga rental dan one package pricing (sudah termasuk transportasi, instalasi, dan dismantling).</li>
+            <li><strong>Status PKP:</strong> PROVIDER bukan merupakan Pengusaha Kena Pajak (Not PKP).</li>
+            <li><strong>Furniture:</strong> Furniture yang ditampilkan pada desain booth mungkin berbeda dengan yang sebenarnya dikarenakan ketersediaan (availability).</li>
+            <li><strong>Force Majeure:</strong> PARA PIHAK dibebaskan dari kewajiban apabila terjadi keadaan kahar (force majeure) seperti bencana alam, kerusuhan, pandemi, atau kebijakan pemerintah yang menghalangi pelaksanaan perjanjian.</li>
+            <li><strong>Penyelesaian Sengketa:</strong> Setiap perselisihan yang timbul dari perjanjian ini akan diselesaikan secara musyawarah untuk mufakat. Apabila tidak tercapai kesepakatan, maka akan diselesaikan melalui Badan Arbitrase Nasional Indonesia (BANI) atau Pengadilan Negeri Jakarta Pusat.</li>
+          </ol>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 6 - Berlaku dan Berakhir / Validity & Termination</h3>
+          <ol>
+            <li>Perjanjian ini mulai berlaku sejak tanggal ditandatangani oleh PARA PIHAK.</li>
+            <li>Perjanjian ini berakhir setelah seluruh kewajiban PARA PIHAK terpenuhi, termasuk pelunasan pembayaran.</li>
+            <li>Perjanjian ini dapat diputus sebelum waktunya apabila salah satu PIHAK melanggar ketentuan yang telah disepakati dan tidak melakukan perbaikan dalam waktu 7 (tujuh) hari kerja setelah mendapat peringatan tertulis.</li>
+            <li>Perjanjian ini dibuat dalam 2 (dua) rangkap asli yang masing-masing memiliki kekuatan hukum yang sama.</li>
+          </ol>
+        </div>
+
+        <div class="contract-section">
+          <h3>Pasal 7 - Hukum yang Berlaku / Governing Law</h3>
+          <p>Perjanjian ini tunduk dan ditafsirkan sesuai dengan hukum Negara Republik Indonesia.</p>
+        </div>
+
+        <div class="contract-section">
+          <h3>Tanda Tangan / Signatures</h3>
+          <p>Dengan menandatangani perjanjian ini, PARA PIHAK menyatakan telah membaca, memahami, dan menyetujui seluruh ketentuan yang tercantum di dalamnya.</p>
+          
+          <p style="margin-top: 20px;">Demikian Perjanjian Kerja Sama ini dibuat untuk dipergunakan sebagaimana mestinya.</p>
+          <p><strong>Jakarta, <span id="signatureDate">26 Juni 2026</span></strong></p>
+
+          <div class="signature-section">
+            <div class="signature-box">
+              <div class="role">PIHAK PERTAMA - PROVIDER</div>
+              <div class="stamp-area">STAMP</div>
+              <div class="name">ANAZ ANDREAN</div>
+              <div class="position">Director<br>PT Exod Creative Indonesia</div>
+            </div>
+            <div class="signature-box">
+              <div class="role">PIHAK KEDUA - KLIEN</div>
+              <div class="stamp-area">STAMP</div>
+              <div class="name" id="signatureClientName">NADIRA</div>
+              <div class="position" id="signatureClientPosition">Representative<br>The Teh Group</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; font-size: 10px; color: #999;">
+          <p><strong>PT Exod Creative Indonesia (EXODINDO)</strong></p>
+          <p>Jl. Percetakan Negara No.265C, Jakarta Pusat | exodcreative.indonesia@gmail.com | 0818-262-889</p>
+          <p style="margin-top: 5px;">This document is confidential and intended solely for the use of the parties mentioned herein.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-panel no-print" style="margin-top: 30px;">
+      <h3> Catatan & Instruksi</h3>
+      <ul style="color: var(--text-muted); font-size: 13px; line-height: 2; margin-left: 20px;">
+        <li>Edit informasi di form panel atas untuk memperbarui kontrak secara otomatis</li>
+        <li>Klik tombol <strong>"Print / PDF"</strong> untuk menyimpan sebagai PDF atau mencetak</li>
+        <li>Klik tombol <strong>"Save Draft"</strong> untuk menyimpan draft kontrak</li>
+        <li>Klik tombol <strong>"Load Template"</strong> untuk memuat template kontrak lain</li>
+        <li>Pastikan semua data klien sudah benar sebelum dicetak</li>
+        <li>Untuk tanda tangan digital, dapat ditambahkan melalui fitur e-signature</li>
+      </ul>
+    </div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/contract.js"></script>
+</body>
+</html>

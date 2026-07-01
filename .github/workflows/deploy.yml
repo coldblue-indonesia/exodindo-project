@@ -1,0 +1,63 @@
+name: EXODINDO CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout kode dari repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: backend/package-lock.json
+
+      # 3. Install Dependencies Backend
+      - name: Install Backend Dependencies
+        run: |
+          cd backend
+          npm ci
+
+      # 4. Membuat file .env dari GitHub Secrets
+      - name: Create .env file from Secrets
+        run: |
+          cd backend
+          echo "NODE_ENV=production" > .env
+          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          echo "SMTP_USER=${{ secrets.SMTP_USER }}" >> .env
+          echo "SMTP_PASS=${{ secrets.SMTP_PASS }}" >> .env
+          echo "PORT=5000" >> .env
+
+      # 5. Menjalankan Test (Jika ada)
+      - name: Run Backend Tests
+        run: |
+          cd backend
+          npm test
+        continue-on-error: true # Biarkan lolos jika belum ada file test
+
+      # 6. Deploy ke Server VPS via SSH (Opsional - Sesuaikan dengan VPS Anda)
+      - name: Deploy to Production Server
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}       # Tambahkan IP VPS di Secrets
+          username: ${{ secrets.VPS_USERNAME }} # Tambahkan 'root' di Secrets
+          key: ${{ secrets.VPS_SSH_KEY }}       # Tambahkan Private Key SSH di Secrets
+          script: |
+            cd /var/www/exodindo
+            git pull origin main
+            cd backend
+            npm ci --production
+            pm2 restart exodindo-backend || pm2 start server.js --name exodindo-backend

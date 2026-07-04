@@ -52,9 +52,11 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.VPS_HOST }}       # Tambahkan IP VPS di Secrets
-          username: ${{ secrets.VPS_USERNAME }} # Tambahkan 'root' di Secrets
-          key: ${{ secrets.VPS_SSH_KEY }}       # Tambahkan Private Key SSH di Secrets
+          host: ${{ 123.45.67.89.VPS_HOST }}       # Tambahkan IP VPS di Secrets
+          username: ${{ root.VPS_USERNAME }} # Tambahkan 'root' di Secrets
+          key: ${{ AAAAB3NzaC1yc2EAAAADAQABAAABAQ... exodcreative.indonesia@gmail.com
+
+.VPS_SSH_KEY }}       # Tambahkan Private Key SSH di Secrets
           script: |
             cd /var/www/exodindo
             git pull origin main

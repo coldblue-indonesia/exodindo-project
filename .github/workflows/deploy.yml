@@ -34,10 +34,10 @@ jobs:
         run: |
           cd backend
           echo "NODE_ENV=production" > .env
-          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
+          echo "MONGODB_URI=${{ mongodb://localhost:27017/exodindo.MONGODB_URI }}" >> .env
           echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
-          echo "SMTP_USER=${{ secrets.SMTP_USER }}" >> .env
-          echo "SMTP_PASS=${{ secrets.SMTP_PASS }}" >> .env
+          echo "SMTP_USER=${{ exodcreative.indonesia@gmail.com.SMTP_USER }}" >> .env
+          echo "SMTP_PASS=${{ @Anaz13051996.SMTP_PASS }}" >> .env
           echo "PORT=5000" >> .env
 
       # 5. Menjalankan Test (Jika ada)
